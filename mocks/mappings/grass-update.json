@@ -1,0 +1,13 @@
+{
+  "name": "grass-update",
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/grass/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"grass\":{\"id\":\"{{request.pathSegments.[1]}}\",\"name\":{{#if (jsonPath request.body '$.name')}}\"{{jsonPath request.body '$.name'}}\"{{else}}\"Kentucky Bluegrass\"{{/if}},\"height\":{{#if (jsonPath request.body '$.height')}}{{jsonPath request.body '$.height'}}{{else}}25{{/if}}}}"
+  }
+}

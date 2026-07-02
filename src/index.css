@@ -18,8 +18,20 @@ body {
   padding: 24px 16px 64px;
 }
 
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.app-logo {
+  color: #3b5bdb;
+  flex: none;
+}
+
 h1 {
-  margin: 0 0 4px;
+  margin: 0;
 }
 
 .subtitle {
