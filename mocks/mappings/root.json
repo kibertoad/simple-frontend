@@ -1,0 +1,12 @@
+{
+  "name": "root - GET /",
+  "request": {
+    "method": "GET",
+    "urlPath": "/"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "root.json"
+  }
+}

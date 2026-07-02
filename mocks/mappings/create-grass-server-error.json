@@ -1,0 +1,16 @@
+{
+  "name": "create-grass (edge) - POST /grass name=trigger-error -> 500",
+  "priority": 1,
+  "request": {
+    "method": "POST",
+    "urlPath": "/grass",
+    "bodyPatterns": [
+      { "matchesJsonPath": { "expression": "$.name", "equalTo": "trigger-error" } }
+    ]
+  },
+  "response": {
+    "status": 500,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "error-server.json"
+  }
+}

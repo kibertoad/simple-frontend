@@ -1,0 +1,4 @@
+{
+  "error": "WIREMOCK_NO_STUB_MATCHED",
+  "message": "No WireMock stub matched this request. An external call from the frontend is not yet mocked - add a mapping under mocks/mappings/ for this route."
+}

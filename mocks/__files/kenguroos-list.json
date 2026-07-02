@@ -1,0 +1,7 @@
+{
+  "kenguroos": [
+    { "id": "k1", "name": "Skippy", "age": 4 },
+    { "id": "k2", "name": "Joey", "age": 1 },
+    { "id": "k3", "name": "Matilda", "age": 7 }
+  ]
+}

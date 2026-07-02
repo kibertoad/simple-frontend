@@ -1,0 +1,12 @@
+{
+  "name": "list-grass - GET /grass",
+  "request": {
+    "method": "GET",
+    "urlPath": "/grass"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "grass-list.json"
+  }
+}

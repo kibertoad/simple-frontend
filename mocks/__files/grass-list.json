@@ -1,0 +1,7 @@
+{
+  "grass": [
+    { "id": "g1", "name": "Kentucky Bluegrass", "height": 12 },
+    { "id": "g2", "name": "Bermuda", "height": 5 },
+    { "id": "g3", "name": "Fescue", "height": 20 }
+  ]
+}

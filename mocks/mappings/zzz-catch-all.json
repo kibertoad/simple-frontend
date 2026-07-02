@@ -1,0 +1,13 @@
+{
+  "name": "catch-all (fails loudly on any unmatched request)",
+  "priority": 100,
+  "request": {
+    "method": "ANY",
+    "urlPattern": ".*"
+  },
+  "response": {
+    "status": 501,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "error-unmatched.json"
+  }
+}

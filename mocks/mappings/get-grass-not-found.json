@@ -1,0 +1,13 @@
+{
+  "name": "get-grass (edge) - GET /grass/missing -> 404",
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/grass/missing"
+  },
+  "response": {
+    "status": 404,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "error-not-found.json"
+  }
+}

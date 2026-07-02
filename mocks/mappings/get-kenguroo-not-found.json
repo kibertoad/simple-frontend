@@ -1,0 +1,13 @@
+{
+  "name": "get-kenguroo (edge) - GET /kenguroos/missing -> 404",
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/kenguroos/missing"
+  },
+  "response": {
+    "status": 404,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "error-not-found.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "update-kenguroo - PUT /kenguroos/{id}",
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/kenguroos/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"kenguroo\":{\"id\":\"{{request.pathSegments.[1]}}\",\"name\":\"{{jsonPath request.body '$.name'}}\",\"age\":{{jsonPath request.body '$.age'}}}}"
+  }
+}

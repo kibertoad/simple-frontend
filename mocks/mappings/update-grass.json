@@ -1,0 +1,13 @@
+{
+  "name": "update-grass - PUT /grass/{id}",
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/grass/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"grass\":{\"id\":\"{{request.pathSegments.[1]}}\",\"name\":\"{{jsonPath request.body '$.name'}}\",\"height\":{{jsonPath request.body '$.height'}}}}"
+  }
+}
