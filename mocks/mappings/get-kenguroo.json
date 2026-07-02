@@ -1,0 +1,13 @@
+{
+  "name": "get-kenguroo - GET /kenguroos/{id}",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/kenguroos/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"kenguroo\":{\"id\":\"{{request.pathSegments.[1]}}\",\"name\":\"Skippy\",\"age\":4}}"
+  }
+}

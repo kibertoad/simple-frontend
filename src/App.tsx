@@ -42,6 +42,8 @@ export default function App() {
         A small React frontend for the Hono API (kenguroos and grass).
       </p>
 
+      <button type="button">This is hello</button>
+
       <Settings onChange={bump} />
       <Health refreshKey={refreshKey} />
       <CrudPanel config={kenguroosConfig} refreshKey={refreshKey} />

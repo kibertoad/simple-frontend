@@ -1,0 +1,13 @@
+{
+  "name": "create-kenguroo - POST /kenguroos",
+  "request": {
+    "method": "POST",
+    "urlPath": "/kenguroos"
+  },
+  "response": {
+    "status": 201,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"kenguroo\":{\"id\":\"{{randomValue length=6 type='ALPHANUMERIC'}}\",\"name\":\"{{jsonPath request.body '$.name'}}\",\"age\":{{jsonPath request.body '$.age'}}}}"
+  }
+}

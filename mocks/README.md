@@ -33,6 +33,14 @@ The catch-all returns `501` with a descriptive `error` body for any request that
 matches no stub, so a newly-added, yet-unmocked backend call is caught rather than
 silently passing.
 
+## Error / edge-case stubs (priority 1, triggerable on demand)
+
+Higher-priority stubs that let UI tests exercise non-happy-path responses:
+
+- `GET /kenguroos/missing` and `GET /grass/missing` → **404** (`error-not-found.json`)
+- `POST /kenguroos` or `POST /grass` with `name: "trigger-error"` → **500** (`error-server.json`)
+- `POST /kenguroos` with `name: "trigger-rate-limit"` → **429** + `Retry-After` (`error-rate-limit.json`)
+
 ## Running locally
 
 ```bash

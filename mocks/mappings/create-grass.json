@@ -1,0 +1,13 @@
+{
+  "name": "create-grass - POST /grass",
+  "request": {
+    "method": "POST",
+    "urlPath": "/grass"
+  },
+  "response": {
+    "status": 201,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"grass\":{\"id\":\"{{randomValue length=6 type='ALPHANUMERIC'}}\",\"name\":\"{{jsonPath request.body '$.name'}}\",\"height\":{{jsonPath request.body '$.height'}}}}"
+  }
+}
