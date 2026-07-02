@@ -1,0 +1,13 @@
+{
+  "name": "grass-create",
+  "request": {
+    "method": "POST",
+    "urlPath": "/grass"
+  },
+  "response": {
+    "status": 201,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"grass\":{\"id\":\"{{randomValue type='UUID'}}\",\"name\":{{#if (jsonPath request.body '$.name')}}\"{{jsonPath request.body '$.name'}}\"{{else}}null{{/if}},\"height\":{{#if (jsonPath request.body '$.height')}}{{jsonPath request.body '$.height'}}{{else}}0{{/if}}}}"
+  }
+}

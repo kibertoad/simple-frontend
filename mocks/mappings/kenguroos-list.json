@@ -1,12 +1,12 @@
 {
-  "name": "root-message",
+  "name": "kenguroos-list",
   "request": {
     "method": "GET",
-    "urlPath": "/"
+    "urlPath": "/kenguroos"
   },
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/json" },
-    "jsonBody": { "message": "simpler-service3 up and running" }
+    "bodyFileName": "kenguroos-list.json"
   }
 }

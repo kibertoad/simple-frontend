@@ -1,0 +1,19 @@
+{
+  "name": "grass-get-by-id",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/grass/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "grass": {
+        "id": "{{request.pathSegments.[1]}}",
+        "name": "Kentucky Bluegrass",
+        "height": 25
+      }
+    }
+  }
+}

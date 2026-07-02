@@ -1,5 +1,5 @@
 {
-  "name": "health - GET /health",
+  "name": "health-check",
   "request": {
     "method": "GET",
     "urlPath": "/health"
@@ -7,6 +7,6 @@
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/json" },
-    "bodyFileName": "health.json"
+    "jsonBody": { "status": "ok" }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "kenguroos-update",
+  "request": {
+    "method": "PUT",
+    "urlPathPattern": "/kenguroos/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "body": "{\"kenguroo\":{\"id\":\"{{request.pathSegments.[1]}}\",\"name\":{{#if (jsonPath request.body '$.name')}}\"{{jsonPath request.body '$.name'}}\"{{else}}\"Joey\"{{/if}},\"age\":{{#if (jsonPath request.body '$.age')}}{{jsonPath request.body '$.age'}}{{else}}2{{/if}}}}"
+  }
+}

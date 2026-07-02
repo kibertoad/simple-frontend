@@ -1,12 +1,12 @@
 {
-  "name": "root-message",
+  "name": "grass-list",
   "request": {
     "method": "GET",
-    "urlPath": "/"
+    "urlPath": "/grass"
   },
   "response": {
     "status": 200,
     "headers": { "Content-Type": "application/json" },
-    "jsonBody": { "message": "simpler-service3 up and running" }
+    "bodyFileName": "grass-list.json"
   }
 }

@@ -1,25 +1,33 @@
-# simpler-service3 Client
+# simpler-service3-frontend
 
 > Generated service blueprint. Read this overview first for the
 > high-level structure; open `modules/<name>.md` only for a module
 > directly relevant to your task.
 
-A small React + Vite single-page frontend that consumes the simpler-service3 Hono API, letting users manage two business entities (kenguroos and grass) via CRUD panels and monitor/reconfigure the backend connection at runtime.
+A React + Vite + TypeScript single-page client for the simpler-service3 Hono API. It monitors service health, lets users configure which API instance to talk to at runtime, and exercises full CRUD over two business entities (kenguroos and grass).
 
 ## Modules
 
-### [Kenguroo Management](modules/kenguroo-management.md)
+### [Kenguroos](modules/kenguroos.md)
 
-The kenguroo domain: kenguroos are named animals with an age. Provides list/get/create/update/delete against the /kenguroos API and drives its CRUD panel (name + age).
+Kangaroo records domain — an aggregate identified by id with a name and age. Provides list/get/create/update/delete over the /kenguroos resource and a UI panel for managing them.
 
-### [Grass Management](modules/grass-management.md)
+### [Grass](modules/grass.md)
 
-The grass domain: grass records are named entries with a height. Provides list/get/create/update/delete against the /grass API and drives its CRUD panel (name + height).
+Grass records domain — an aggregate identified by id with a name and height. Provides list/get/create/update/delete over the /grass resource and a UI panel for managing them.
 
-### [Service Connectivity](modules/service-connectivity.md)
+### [Record Management](modules/record-management.md)
 
-Domain of the app's relationship with its backend: monitoring service health and letting operators point the client at any simpler-service3 instance at runtime (base URL selection, health checks, root/user probes).
+Shared editing surface that renders any name+numeric entity as a table with add/edit/delete/refresh interactions, parameterized per aggregate via EntityConfig. Backs both the Kenguroos and Grass domains.
+
+### [Service Health](modules/service-health.md)
+
+Monitoring capability that probes the backend /health (and root) endpoints and surfaces reachable/healthy/unreachable status to the user.
+
+### [API Connection](modules/api-connection.md)
+
+Lets users point the client at any simpler-service3 instance at runtime — the configurable, localStorage-persisted API base URL, its build-time default, and the settings UI to change or reset it.
 
 ### [infrastructure](modules/infrastructure.md)
 
-Cross-cutting technical plumbing: the HTTP transport/error layer, runtime base-URL configuration and persistence, the generic reusable CRUD panel component, app bootstrap, and Vite/TypeScript build + dev-proxy configuration.
+Cross-cutting technical plumbing: the HTTP transport/fetch wrapper and ApiError handling, app bootstrap and shell, branding, styling, dev-server proxy, TypeScript config, and build tooling.

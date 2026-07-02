@@ -1,0 +1,10 @@
+{
+  "name": "kenguroos-delete",
+  "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/kenguroos/[^/]+"
+  },
+  "response": {
+    "status": 204
+  }
+}

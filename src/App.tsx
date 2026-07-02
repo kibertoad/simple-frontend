@@ -4,6 +4,7 @@ import type { Grass, Kenguroo } from './api'
 import Settings from './components/Settings'
 import Health from './components/Health'
 import CrudPanel, { type EntityConfig } from './components/CrudPanel'
+import CatLogo from './components/CatLogo'
 
 const kenguroosConfig: EntityConfig<Kenguroo> = {
   title: 'Kenguroos',
@@ -33,7 +34,10 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>simpler-service3 client</h1>
+      <header className="app-header">
+        <CatLogo className="app-logo" size={56} />
+        <h1>simpler-service3 client</h1>
+      </header>
       <p className="subtitle">
         A small React frontend for the Hono API (kenguroos and grass).
       </p>
