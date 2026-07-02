@@ -1,0 +1,10 @@
+{
+  "name": "grass-delete",
+  "request": {
+    "method": "DELETE",
+    "urlPathPattern": "/grass/[^/]+"
+  },
+  "response": {
+    "status": 204
+  }
+}

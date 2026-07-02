@@ -1,0 +1,12 @@
+{
+  "name": "kenguroos-list",
+  "request": {
+    "method": "GET",
+    "urlPath": "/kenguroos"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "bodyFileName": "kenguroos-list.json"
+  }
+}

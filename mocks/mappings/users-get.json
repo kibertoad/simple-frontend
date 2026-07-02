@@ -1,0 +1,15 @@
+{
+  "name": "users-get-by-id",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/users/[^/]+"
+  },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "transformers": ["response-template"],
+    "jsonBody": {
+      "user": { "id": "{{request.pathSegments.[1]}}" }
+    }
+  }
+}
